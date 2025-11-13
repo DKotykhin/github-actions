@@ -90,7 +90,6 @@ jobs:
           fi
 
       - name: print env variables
-        run: printenv
-        env:
-          REACT_APP_ENV: ${{ secrets.REACT_APP_ENV }}
-          NODE_ENV: ${{ env.NODE_ENV }}
+        run: |
+          echo "NODE_ENV: $NODE_ENV"
+          echo "REACT_APP_ENV: $REACT_APP_ENV"
